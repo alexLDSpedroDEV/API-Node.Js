@@ -3,8 +3,13 @@ const mongosse = require('mongoose');
 const app = express();
 
 const router = require('./routes/routers')
+const PORT = process.env.PORT | 8080
+const cors = require('cors');
 
-// fqzendo o node ler json / milderels
+app.use(cors());
+
+
+// fazendo o node ler json / milderels
 app.use(
     express.urlencoded({
         extended: true,
@@ -28,9 +33,10 @@ mongosse.connect('mongodb+srv://alexlopes:orquideas1809@cluid1.ekh4puk.mongodb.n
     console.log("mongodb conectado")
 
     //iniciando o servidor na porta 8080
-    app.listen(8080, () => {
+    app.listen(PORT, () => {
         console.log("servidor rodando na porta 8080: http://localhost:8080");
     })
 })
+
 .catch(() => { console.log("error")})
 

@@ -1,26 +1,27 @@
 const router = require('express').Router()
-const Person = require('../models/person');
+const carro = require('../models/person');
 
 
 //create - criação de dados
 router.post('/', async (req, res) => {
     
     // pegando os dado da req.body
-    const {name, salary, appoved} = req.body
+    const {name, valor, marca, url} = req.body
 
     !name ? res.status(422).json({error: "O nome é obrigatorio"}) : ""
      
     //criando um objeto que vai receber todos os parametros para poder ser enviado ao banco de dados
-    const person = {
+    const newCar = {
         name, 
-        salary,
-        appoved
+        valor,
+        marca,
+        url
     }
 
     //usando o metodo created
     try{
         //salvando o dado no banco de dado
-        await Person.create(person)
+        await carro.create(newCar)
         res.status(201).json({message: "pessoa inserido no servidor com sucesso"})
 
 
@@ -34,7 +35,7 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     try{
         //find - buscando os dados
-        const peaple = await Person.find();
+        const peaple = await carro.find();
 
         res.status(200).json(peaple)
 
@@ -48,8 +49,8 @@ router.get('/:id', async (req,res) => {
     const id = req.params.id
 
     try{
-        const person = await Person.findOne({_id: id})
-        res.status(200).json(person)
+        const newCar = await carro.findOne({_id: id})
+        res.status(200).json(newCar)
 
     } catch (error) {
         res.status(500).json({error: error})
@@ -59,15 +60,15 @@ router.get('/:id', async (req,res) => {
 router.delete('/:id', async (req, res) => {
     const id = req.params.id
 
-    const person = await Person.findOne({_id: id})
+    const newCar = await carro.findOne({_id: id})
     
-    if (!person) {
+    if (!newCar) {
         res.status(422).json({message: "pessoa Não encontrada em nosso servidores"});
         return
     }
 
     try{
-        await Person.deleteOne({_id: id})
+        await carro.deleteOne({_id: id})
         res.status(200).json({message: "Usúario removido com sucesso"})
 
     } catch (error) {

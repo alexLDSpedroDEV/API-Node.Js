@@ -1,10 +1,11 @@
 const mongosse = require('mongoose');
 
 //criano o que a ape vai pegar do servidor
-const person = mongosse.model('Person', {
+const carro = mongosse.model('Person', {
     name: String,
-    salary: Number,
-    appoved: Boolean,
+    valor: Number,
+    marca: String,
+    url: String,
 })
 
-module.exports = person;
+module.exports = carro;

@@ -1,0 +1,23 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+div img{
+    width: 225px;
+}
+.div{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 150px;
+    background-color: silver;
+    width: 90vw;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dd{
+    background-color: red;
+}
