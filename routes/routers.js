@@ -44,18 +44,21 @@ router.get('/', async (req, res) => {
     }
 })
 
+
 router.get('/:id', async (req,res) => {
     //extrair os dados da requisição
     const id = req.params.id
 
     try{
-        const newCar = await carro.findOne({_id: id})
+        const newCar = await carro.findOne({name: id})
         res.status(200).json(newCar)
+        console.log(id)
 
     } catch (error) {
         res.status(500).json({error: error})
     }
 })
+
 
 router.delete('/:id', async (req, res) => {
     const id = req.params.id
