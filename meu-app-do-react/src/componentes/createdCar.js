@@ -119,6 +119,16 @@ export default class CreatedCar extends React.Component{
                     </DivForm>
 
                     <DivForm>
+                        <Label>Ano  do Carro</Label>
+                        <Input
+                        placeholder='Digite o ano do carro'
+                        type='text'
+                        className='form_input'
+                        onChange={ e => this.setState({marca: e.target.value})}
+                        />
+                    </DivForm>
+
+                    <DivForm>
                         <Label>Valor do Carro</Label>
                         <Input
                         placeholder='Digite o valor do carro'
@@ -131,8 +141,8 @@ export default class CreatedCar extends React.Component{
                     <DivForm>
                         <Label>Foto do seu carro</Label>
                         <Input
-                        placeholder='foto do seu carro'
-                        type='file'
+                        placeholder='Digite a Url da imagens'
+                        type='text'
                         className='form_input'
                         onChange={ e => this.setState({url: e.target.value})}
                         />
