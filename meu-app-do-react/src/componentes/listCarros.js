@@ -1,6 +1,50 @@
 import React from 'react'
 import axios from 'axios'
-import style from './listCarro.module.css'
+
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+  width:  90vw;
+  height: auto;
+  
+  background-color: blue;
+  overflow-x: hidden;
+  margin: auto;
+  display: grid;
+
+`;
+const Boxtitles = styled.div`
+  width:  90vw;
+  height: 100px;
+  display: grid;
+  background-color: white;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+const Box = styled.div`
+  width:  90vw;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  text-align: center;
+  margin-top: 40px;
+  align-items: center;
+  
+`;
+
+const Img = styled.img`
+  width:  200px;
+`;
+
+const Title = styled.p`
+  font-size: 1.4em;
+`;
+
 
 export default class ListCarros extends React.Component{
     
@@ -30,25 +74,44 @@ export default class ListCarros extends React.Component{
 
     render() {
         return(
-            <div>
+            <Container>
+                
+
+                <Boxtitles>
+                    <div>
+                        <Title>Nome</Title>
+                    </div>
+                    <div>
+                        <Title>Ano</Title>
+                    </div>
+                    <div>
+                        <Title>Marca</Title>
+                    </div>
+                    <div>
+                        <Title>valor</Title>
+                    </div>
+                    <div>
+                        <Title>imagen</Title>
+                    </div>
+                </Boxtitles>
                 
                 {
                     //pegando todos os dados que estão na lista carro no state e mapeando e colocando em carro
                     this.state.carros.map(carro=>
 
                         //mostrando os dados mapeados
-                        <div id='dd' className={style.div} key={carro._id}>
+                        <Box  key={carro._id}>
                             <p>{carro.name}</p>
-                            <p>{carro.valor}</p>
-                            <p>{carro.marca}</p>  
-                            
-                            <img src={carro.url}/>
+                            <p>{carro.ano}</p> 
+                            <p>{carro.marca}</p>
+                            <p>{carro.valor}</p>  
+                            <Img src={carro.url}/>
                                                       
-                        </div>
+                        </Box>
                     )
                 }
                 
-            </div>
+            </Container>
         )
     }
 }

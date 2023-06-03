@@ -67,9 +67,10 @@ export default class CreatedCar extends React.Component{
             valor: "",
             marca: "",
             url: "",
+            ano: "",
         }
 
-        console.log(this.state)
+        
         //enviando tudos que esta no constructor para o handleSubmit
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -124,7 +125,7 @@ export default class CreatedCar extends React.Component{
                         placeholder='Digite o ano do carro'
                         type='text'
                         className='form_input'
-                        onChange={ e => this.setState({marca: e.target.value})}
+                        onChange={ e => this.setState({ano: e.target.value})}
                         />
                     </DivForm>
 

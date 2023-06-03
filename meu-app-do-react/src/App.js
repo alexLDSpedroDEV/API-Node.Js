@@ -33,13 +33,8 @@ const Btn = styled.button`
   font-size: 1.4em;
   margin-top: 20px;
   color: white;
-  &:hover, &:focus {
-    transition: 2s;
-    background-color: #0000f0;
-  }
-  &:active {
-    color: black;
-  }
+  border: 0px solid white;
+  
 `;
 
 

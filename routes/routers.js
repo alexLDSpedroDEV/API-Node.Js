@@ -6,9 +6,9 @@ const carro = require('../models/person');
 router.post('/', async (req, res) => {
     
     // pegando os dado da req.body
-    const {name, valor, marca, url} = req.body
+    const {name, valor, marca, url, ano} = req.body
 
-    console.log(url)
+    
 
     !name ? res.status(422).json({error: "O nome é obrigatorio"}) : ""
      
@@ -17,7 +17,8 @@ router.post('/', async (req, res) => {
         name, 
         valor,
         marca,
-        url
+        ano,
+        url,
     }
 
     //usando o metodo created

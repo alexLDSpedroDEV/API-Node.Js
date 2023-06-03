@@ -5,6 +5,7 @@ const carro = mongosse.model('Person', {
     name: String,
     valor: Number,
     marca: String,
+    ano: Number,
     url: String,
 })
 
