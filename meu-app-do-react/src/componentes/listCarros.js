@@ -41,6 +41,8 @@ export default class ListCarros extends React.Component{
                             <p>{carro.name}</p>
                             <p>{carro.valor}</p>
                             <p>{carro.marca}</p>  
+                            
+                            <img src={carro.url}/>
                                                       
                         </div>
                     )

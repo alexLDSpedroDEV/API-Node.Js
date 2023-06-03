@@ -66,8 +66,10 @@ export default class CreatedCar extends React.Component{
             name: "",
             valor: "",
             marca: "",
+            url: "",
         }
 
+        console.log(this.state)
         //enviando tudos que esta no constructor para o handleSubmit
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -86,6 +88,8 @@ export default class CreatedCar extends React.Component{
         })
         
     }
+
+    
     
     render() {
         return(
@@ -122,6 +126,17 @@ export default class CreatedCar extends React.Component{
                         className='form_input'
                         onChange={ e => this.setState({valor: e.target.value})}
                         />
+                    </DivForm>
+
+                    <DivForm>
+                        <Label>Foto do seu carro</Label>
+                        <Input
+                        placeholder='foto do seu carro'
+                        type='file'
+                        className='form_input'
+                        onChange={ e => this.setState({url: e.target.value})}
+                        />
+                        
                     </DivForm>
 
                     <Button type='submit'>enviar</Button>

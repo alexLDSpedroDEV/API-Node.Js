@@ -8,6 +8,8 @@ router.post('/', async (req, res) => {
     // pegando os dado da req.body
     const {name, valor, marca, url} = req.body
 
+    console.log(url)
+
     !name ? res.status(422).json({error: "O nome é obrigatorio"}) : ""
      
     //criando um objeto que vai receber todos os parametros para poder ser enviado ao banco de dados

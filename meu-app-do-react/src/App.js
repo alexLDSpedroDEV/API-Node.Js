@@ -2,6 +2,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import ListCarros from './componentes/listCarros';
 import CreatedCar from './componentes/createdCar'
+import Home from './componentes/home';
 import styled from 'styled-components';
 
 
@@ -21,6 +22,7 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   color: white;
+  
 `;
 
 const Btn = styled.button`
@@ -32,7 +34,8 @@ const Btn = styled.button`
   margin-top: 20px;
   color: white;
   &:hover, &:focus {
-    color: palevioletred;
+    transition: 2s;
+    background-color: #0000f0;
   }
   &:active {
     color: black;
@@ -68,7 +71,7 @@ function App() {
     } else if (tela == 2) {
       return <CreatedCar/>
     } else if (tela == 0) {
-      return <div></div>
+      return <Home/>
     }
   }
 
