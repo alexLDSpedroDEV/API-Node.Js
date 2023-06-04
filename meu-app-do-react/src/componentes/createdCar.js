@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
+/* estilizaçõa do Styled-components */
 const Button = styled.button`
   color: black;
   font-size: 1em;
