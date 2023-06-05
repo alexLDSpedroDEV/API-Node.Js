@@ -26,7 +26,7 @@ const Boxtitles = styled.div`
 `;
 
 const Box = styled.div`
-  width:  90vw;
+  width: 89.7vw;
   height: 150px;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
@@ -34,6 +34,8 @@ const Box = styled.div`
   text-align: center;
   margin-top: 40px;
   align-items: center;
+  color: white;
+
   
 `;
 
@@ -104,7 +106,7 @@ export default class ListCarros extends React.Component{
                             <p>{carro.name}</p>
                             <p>{carro.ano}</p> 
                             <p>{carro.marca}</p>
-                            <p>{carro.valor}</p>  
+                            <p>R$: {carro.valor}</p>  
                             <Img src={carro.url}/>
                                                       
                         </Box>
