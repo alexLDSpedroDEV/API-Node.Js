@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import DeleteCar from './deletCar';
+import EditarCar from './editarCar';
 
 import styled from 'styled-components'
 
@@ -20,7 +21,7 @@ const Boxtitles = styled.div`
   height: 100px;
   display: grid;
   background-color: white;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20% 15% 5%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -30,14 +31,13 @@ const Box = styled.div`
   width: 89.7vw;
   height: 150px;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20% 15% 5%;
   justify-items: center;
   text-align: center;
   margin-top: 40px;
   align-items: center;
   color: white;
-
-  
+ 
 `;
 
 const Img = styled.img`
@@ -110,6 +110,7 @@ export default class ListCarros extends React.Component{
                             <Img src={carro.url}/>
                             <div>
                                 <DeleteCar idCar={carro._id} />
+                                
                             </div>
                                                       
                         </Box>

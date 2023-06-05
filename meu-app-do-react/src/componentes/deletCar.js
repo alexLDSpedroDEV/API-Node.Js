@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
+const Btn = styled.button`
+  background-color: #00000000;
+  color: white;
+  width: 50px;
+  height: 45px;
+  font-size: 2em;
+`;
 
 
 
 export default class DeleteCar extends Component {
-  
-  
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -42,7 +47,7 @@ export default class DeleteCar extends Component {
         {deletado ? (
           <p>Documento excluído com sucesso!</p>
         ) : (
-          <button onClick={() => this.handleDelete(idCar) }>X</button>
+          <Btn onClick={() => this.handleDelete(idCar) }>X</Btn>
         )}
       </div>
     );

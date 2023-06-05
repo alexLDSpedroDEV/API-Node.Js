@@ -96,6 +96,7 @@ router.put('/:id', async (req, res) => {
 
     //pegando os dados que vinheram da requisição
     const dados = req.body; 
+    console.log(req.body)
 
     console.log(dados)
     try {
