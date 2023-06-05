@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import DeleteCar from './deletCar';
 
 import styled from 'styled-components'
 
@@ -53,7 +54,8 @@ export default class ListCarros extends React.Component{
 
     //usando o state do react para criar um list de carros
     state={
-        carros:[]
+        carros:[],
+        
     }
     
     //criando um function acinada para pegar os dados do backend
@@ -69,10 +71,8 @@ export default class ListCarros extends React.Component{
         })
     }
 
-    deletCar(e){
-        console.log(e)
-        
-    }
+    
+    
 
     render() {
         return(
@@ -108,6 +108,9 @@ export default class ListCarros extends React.Component{
                             <p>{carro.marca}</p>
                             <p>R$: {carro.valor}</p>  
                             <Img src={carro.url}/>
+                            <div>
+                                <DeleteCar idCar={carro._id} />
+                            </div>
                                                       
                         </Box>
                     )

@@ -64,22 +64,55 @@ router.get('/:id', async (req,res) => {
 
 
 router.delete('/:id', async (req, res) => {
-    const id = req.params.id
+    //pegando dados que vei do front-end
+    const id = req.params.id; 
 
-    const newCar = await carro.findOne({_id: id})
     
-    if (!newCar) {
-        res.status(422).json({message: "pessoa Não encontrada em nosso servidores"});
-        return
-    }
 
-    try{
-        await carro.deleteOne({_id: id})
-        res.status(200).json({message: "Usúario removido com sucesso"})
+    console.log(id)
+    try {
 
-    } catch (error) {
-        res.status(500).json({error: error})
-    }
+        // Atualiza o documento no MongoDB
+        const result = await carro.deleteOne({ _id: id });
+
+        if (result.deletedCount === 1) {
+            res.send('Carro deletado com sucesso');
+        } else {
+            res.status(404).send('Carro não encontrado');
+        }
+    } 
+    catch (error) {
+        console.log(error);
+        res.status(500).send('Erro interno do servidor.');
+  }
+})
+
+
+//requisiçao put -  editar os dados da api
+router.put('/:id', async (req, res) => {
+
+    //pegando dados que vei do front-end
+    const id = req.params.id; 
+
+    //pegando os dados que vinheram da requisição
+    const dados = req.body; 
+
+    console.log(dados)
+    try {
+
+        // Atualiza o documento no MongoDB
+        const result = await carro.updateOne({ _id: id }, { $set: dados });
+
+        if (result.modifiedCount === 1) {
+            res.send('Carro atualizado com sucesso.');
+        } else {
+            res.status(404).send('Carro não encontrado.');
+        }
+    } 
+    catch (error) {
+        console.log(error);
+        res.status(500).send('Erro interno do servidor.');
+  }
 })
 
 module.exports = router
