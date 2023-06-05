@@ -4,7 +4,7 @@ import ListCarros from './componentes/listCarros';
 import CreatedCar from './componentes/createdCar'
 import Home from './componentes/home';
 import styled from 'styled-components';
-import DeleteCar from './componentes/deletCar';
+import EditeCar from './componentes/editarCar';
 
 
 const Container = styled.div`
@@ -77,7 +77,7 @@ function App() {
         <div>
           <h1>VendeCar</h1>
         </div>
-
+        
         <div>
           <Btn onClick={() => linkPaginas(0)}>Home</Btn>
           <Btn onClick={() => linkPaginas(1)}>Carros</Btn>

@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import DeleteCar from './deletCar';
-import EditarCar from './editarCar';
+import EditeCar from './editarCar';
 
 import styled from 'styled-components'
 
@@ -48,14 +48,23 @@ const Title = styled.p`
   font-size: 1.4em;
 `;
 
+const Popup = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+`;
+
 
 export default class ListCarros extends React.Component{
     
 
     //usando o state do react para criar um list de carros
     state={
-        carros:[],
-        
+        carros:[],  
     }
     
     //criando um function acinada para pegar os dados do backend
@@ -96,6 +105,9 @@ export default class ListCarros extends React.Component{
                         <Title>imagen</Title>
                     </div>
                 </Boxtitles>
+                <Popup>
+                    <EditeCar /> 
+                </Popup> 
                 
                 {
                     //pegando todos os dados que estão na lista carro no state e mapeando e colocando em carro
@@ -110,10 +122,11 @@ export default class ListCarros extends React.Component{
                             <Img src={carro.url}/>
                             <div>
                                 <DeleteCar idCar={carro._id} />
-                                
+                                <button>editar</button>
                             </div>
-                                                      
+                                                        
                         </Box>
+                        
                     )
                 }
                 
