@@ -4,7 +4,7 @@ import ListCarros from './componentes/listCarros';
 import CreatedCar from './componentes/createdCar'
 import Home from './componentes/home';
 import styled from 'styled-components';
-import EditeCar from './componentes/editarCar';
+/* import EditeCar from './componentes/editarCar'; */
 
 
 const Container = styled.div`

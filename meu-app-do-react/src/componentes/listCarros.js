@@ -82,6 +82,7 @@ export default class ListCarros extends React.Component{
 
     
     
+    
 
     render() {
         return(
@@ -122,7 +123,7 @@ export default class ListCarros extends React.Component{
                             <Img src={carro.url}/>
                             <div>
                                 <DeleteCar idCar={carro._id} />
-                                <button>editar</button>
+                                <button >editar</button>
                             </div>
                                                         
                         </Box>
