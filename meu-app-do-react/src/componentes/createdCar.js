@@ -84,7 +84,7 @@ export default class CreatedCar extends React.Component{
         
         
         //enviando os dados do state (json que criamos) para a url do backend
-        axios.post('http://localhost:8080/person/', this.state)
+        axios.post('http://localhost:8080/person', this.state)
         .then(res => {
             alert("Registrado com sucesso")
         })

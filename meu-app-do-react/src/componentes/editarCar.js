@@ -99,6 +99,8 @@ export default class EditeCar extends React.Component{
     
     
     render() {
+        const{ carro } = this.props;
+        console.log(carro)
         return(
             <div>
                 <FormNewCar  onSubmit={this.handleSubmit}>

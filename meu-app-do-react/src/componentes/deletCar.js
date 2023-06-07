@@ -40,7 +40,7 @@ export default class DeleteCar extends Component {
     const { deletado } = this.state;
 
     //id do carro que o botão esta
-    const { idCar } = this.props;
+     const{ idCar } = this.props;
 
     return (
       <div>

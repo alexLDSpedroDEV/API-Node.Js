@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import DeleteCar from './deletCar';
-import EditeCar from './editarCar';
+import EditeCar from './editarCar'
 
 import styled from 'styled-components'
 
@@ -29,7 +29,8 @@ const Boxtitles = styled.div`
 
 const Box = styled.div`
   width: 89.7vw;
-  height: 150px;
+  height: auto;
+  min-height: 150px;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 15% 5%;
   justify-items: center;
@@ -49,7 +50,7 @@ const Title = styled.p`
 `;
 
 const Popup = styled.div`
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -80,11 +81,17 @@ export default class ListCarros extends React.Component{
         })
     }
 
-    
+   
     
     
 
     render() {
+        const openPag = (e) => {
+            console.log(e)
+            window.open('http://localhost:3000?3','_self')
+            return  <EditeCar dado={this.state.carros}/>
+            
+        }
         return(
             <Container>
                 
@@ -106,9 +113,8 @@ export default class ListCarros extends React.Component{
                         <Title>imagen</Title>
                     </div>
                 </Boxtitles>
-                <Popup>
-                    <EditeCar /> 
-                </Popup> 
+                
+                
                 
                 {
                     //pegando todos os dados que estão na lista carro no state e mapeando e colocando em carro
@@ -122,9 +128,9 @@ export default class ListCarros extends React.Component{
                             <p>R$: {carro.valor}</p>  
                             <Img src={carro.url}/>
                             <div>
-                                <DeleteCar idCar={carro._id} />
-                                <button >editar</button>
+                                <DeleteCar idCar={carro._id} />                                
                             </div>
+                            
                                                         
                         </Box>
                         

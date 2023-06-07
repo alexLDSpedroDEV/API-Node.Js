@@ -4,6 +4,7 @@ import ListCarros from './componentes/listCarros';
 import CreatedCar from './componentes/createdCar'
 import Home from './componentes/home';
 import styled from 'styled-components';
+import EditeCar from './componentes/editarCar';
 /* import EditeCar from './componentes/editarCar'; */
 
 
@@ -56,6 +57,9 @@ function App() {
     } else if (e == 0) {
       window.open('http://localhost:3000?0','_self')
     }
+    else if (e == 0) {
+      window.open('http://localhost:3000?3','_self')
+    }
     
   }
 
@@ -67,6 +71,9 @@ function App() {
       return <CreatedCar/>
     } else if (tela == 0) {
       return <Home/>
+    }
+    else if (tela == 3) {
+      return <EditeCar/>
     }
   }
 

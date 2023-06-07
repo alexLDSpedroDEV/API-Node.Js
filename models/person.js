@@ -1,7 +1,7 @@
 const mongosse = require('mongoose');
 
 //criano o que a api vai pegar do servidor
-const carro = mongosse.model('Person', {
+const carro = mongosse.model('carros', {
     name: String,
     valor: Number,
     marca: String,
