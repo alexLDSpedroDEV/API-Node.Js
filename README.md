@@ -1,5 +1,5 @@
-# Crud-Car-Node.js
-APi em node Js
+# Full-Stack Clud de Venda de Carros
+
 Oi pessoal! 😄
 
 Estou animado para compartilhar com vocês o meu primeiro projeto full stack: um Clud de carros para vender! 🚗
@@ -26,7 +26,6 @@ Mongoose: Utilizei essa biblioteca maravilhosa para facilitar a criação das re
 React.js e JavaScript: Desenvolvi uma interface web interativa e responsiva usando essas tecnologias poderosas.
 Styled-components: Utilizei essa biblioteca de estilização para criar um interface incrível para o usuario.
 Axios: Integrei o front-end com o backend, para poder mandar e receber as requisições do servidor.
-
 
 Se você quiser conferir o código-fonte completo e saber mais sobre o projeto, pode encontrá-lo no meu repositório: https://lnkd.in/dnj_BSSk
 
