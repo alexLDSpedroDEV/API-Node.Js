@@ -8,6 +8,8 @@ Desenvolvi esse projeto com o objetivo de aprofundar meus conhecimentos no desen
 
 Utilizei várias tecnologias modernas para construir o projeto:
 
+
+
 🔧 Backend:
 
 Node.js e JavaScript: Essa combinação incrível tornou o desenvolvimento mais fácil e produtivo.
@@ -25,7 +27,13 @@ React.js e JavaScript: Desenvolvi uma interface web interativa e responsiva usan
 Styled-components: Utilizei essa biblioteca de estilização para criar um interface incrível para o usuario.
 Axios: Integrei o front-end com o backend, para poder mandar e receber as requisições do servidor.
 
+
+
+
 Se você quiser conferir o código-fonte completo e saber mais sobre o projeto, pode encontrá-lo no meu repositório: https://lnkd.in/dnj_BSSk
+
+
+
 
 #react 
 #frontend
