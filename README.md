@@ -28,12 +28,18 @@ Styled-components: Utilizei essa biblioteca de estilização para criar um inter
 Axios: Integrei o front-end com o backend, para poder mandar e receber as requisições do servidor.
 
 
-
-
 Se você quiser conferir o código-fonte completo e saber mais sobre o projeto, pode encontrá-lo no meu repositório: https://lnkd.in/dnj_BSSk
 
+📽 Video do Projeto Completo
+
+https://github.com/alexLDSpedroDEV/Crud-Car-Node.js/assets/115034319/d97305af-4820-4d42-bb55-b5d3c2355ff2
 
 
+📷 Image das  telas do projeto
+
+![VenderCarHome](https://github.com/alexLDSpedroDEV/Crud-Car-Node.js/assets/115034319/d9bd6093-e48e-43ef-b97a-323cd3427c8a)
+![venderCarCarros](https://github.com/alexLDSpedroDEV/Crud-Car-Node.js/assets/115034319/fcf039c9-f210-4c11-8c76-d51de69c4a99)
+![venderCarCadastrar](https://github.com/alexLDSpedroDEV/Crud-Car-Node.js/assets/115034319/d47280b1-9438-47d4-8337-9872e5e254f4)
 
 #react 
 #frontend
